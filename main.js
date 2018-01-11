@@ -4,10 +4,6 @@ let height=canvas.height;
 let width=canvas.width;
 let totalPixels=height*width;
 
-ctx.fillStyle="rgb(200,200,200)";
-ctx.fillRect(0,0,20,20);
-
-
 function scramble(text){
 	let maxPixelsPerChar=Math.ceil((totalPixels-1)/text.length);
 	let encodingBase=Math.ceil(Math.pow(256, 1/maxPixelsPerChar));
