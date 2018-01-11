@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>steganoEmail</title>
+	</head>
+	<body>
+		<label for="image">Upload your image:</label>
+		<input type="file" name="image" onchange="updateImage(this.files[0])" accept="image/*">
+		<input type="text" placeholder="Text you want to scramble" oninput="scramble(this.value)">
+		<input type="button" value="Unscramble" onclick="unscramble()">
+		<canvas id="canvas"></canvas>
+		<script src="main.js"></script>
+	</body>
+</html>
