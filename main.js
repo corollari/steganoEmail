@@ -33,10 +33,12 @@ function updateImage(file){
 	img.onload=function(){
 		canvas.width=img.width;
 		canvas.height=img.height;
-		(renderImage=function(){ctx.drawImage(img, 0, 0);})();
-		window.URL.revokeObjectURL(img.src);
 		height=canvas.height;
 		width=canvas.width;
+		ctx.fillStyle="#FFFFFF";
+		ctx.fillRect(0, 0, width, height);
+		(renderImage=function(){ctx.drawImage(img, 0, 0);})();
+		window.URL.revokeObjectURL(img.src);
 		totalPixels=height*width;
 
 	}
