@@ -13,7 +13,7 @@ function scramble(text){
 	setPixelAlpha(0, 0, encodingBase);
 	for(var i=0; i<text.length; i++){
 		let alpha = text.charCodeAt(i);
-		for(let j=0; j<pixelsPerChar && alpha!=0; j++){
+		for(let j=0; j<pixelsPerChar; j++){
 			let position = 1 + i*pixelsPerChar + j;
 			let x = position%width;
 			let y = Math.floor(position/width);
